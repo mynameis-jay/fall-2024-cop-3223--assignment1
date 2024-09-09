@@ -10,12 +10,14 @@ double calculateDistance() {
     printf("Enter X #1: ");
     scanf("%lf", &x1);
     printf("Enter Y #1: ");
-    scanf("%lf," &y1);
+    scanf("%lf", &y1);
     printf("Point #2:");
     printf("Enter X #2: ");
     scanf("%lf", &x2);
     printf("Enter Y #2: ");
-    scanf("%lf," &y2);
+    scanf("%lf", &y2);
+
+    dist = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
 
     printf("The distance between the two points is %.2lf", dist);
 
@@ -25,7 +27,7 @@ double calculateDistance() {
 double calculatePerimeter() {
     double dist = calculateDistance();
     double rad = (dist / 2);
-    double rim = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    double rim = (2 * PI * rad);
     printf("The perimeter of the city encompassed by your request is %.2lf", rim);
 
     return rim;
